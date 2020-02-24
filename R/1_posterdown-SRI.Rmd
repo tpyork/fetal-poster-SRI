@@ -115,10 +115,17 @@ knitr::include_graphics("figures/DNAm-GE-data-integration-flowchart.png")
 ```
 
 
-```{r, eval = TRUE, overlap-fig, fig.cap = 'Summary of gene-based enrichment for Gene Ontology groups and KEGG pathways.', out.width = "90%"}
+```{r, eval = TRUE, overlap-fig, fig.cap = 'Simulation study of overlapping CpG results from PREG and NEST', out.width = "70%"}
 knitr::include_graphics("figures/table_significant-DMP-overlap.png")
 
 ```
+
+
+```{r, gene-list-fig, fig.cap = 'DMP *cis* Gene Expression Association.', out.width = "90%"}
+knitr::include_graphics("figures/ge-gene-list.png")
+
+```
+
 
 
 ```{r, enrichment-fig, fig.cap = 'Summary of gene-based enrichment for Gene Ontology groups and KEGG pathways.', out.width = "90%"}
