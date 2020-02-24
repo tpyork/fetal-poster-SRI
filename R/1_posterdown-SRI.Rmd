@@ -1,0 +1,134 @@
+---
+title: Umbilical Cord Blood DNA Methylation Loci Associated with Gestational Age at Birth
+title_textsize: 5
+#author_textcol: "blue"
+font_family: "arial"
+body_textsize: 40px
+body_bgcol: "white"
+#sectitle_boxshape: 4mm
+author:
+  - name: Timothy P. York
+    affil: 1, 2
+    twitter: timothypyork5
+    email: tpyork@vcu.edu
+    orcid: 0000-0003-4068-4286
+    main: true
+  - name: Shawn J. Latendresse
+    affil: 2
+  - name: Colleen Jackson-Cook
+    affil: 1, 2, 4
+  - name: Dana M. Lapato
+    affil: 1
+  - name: Sara Moyer
+    affil: 1
+  - name: Aaron R. Wolen
+    affil: 5
+  - name: Roxann Roberson-Nay
+    affil: 6
+  - name: Elizabeth K. Do
+    affil: 7
+  - name: Susan K. Murphy
+    affil: 8
+  - name: Catherine Hoyo
+    affil: 9
+  - name: Bernard F. Fuemmeler
+    affil: 7
+  - name: Jerome F. Strauss III
+    affil: 1, 2
+  
+affiliation:
+  - num: 1
+    address: Department of Human and Molecular Genetics, Virginia Commonwealth University
+  - num: 2
+    address: Department of Obstetrics and Gynecology, Virginia Commonwealth University
+  - num: 3
+    address: Department of Psychology and Neuroscience, Baylor Univeristy
+  - num: 4
+    address: Department of Pathology, Virginia Commonwealth University
+  - num: 5
+    address: Department of Surgery, University of Tennessee Health Science Center
+  - num: 6
+    address: Department of Psychiatry, Virginia Commonwealth University
+  - num: 7
+    address: Department of Health Behavior and Policy, Virginia Commonwealth University
+  - num: 8
+    address: Department of Obstetrics and Gynecology, Duke University
+  - num: 9
+    address: Epidemiology and Environmental Epigenomics Laboratory, North Carolina State University
+main_findings:
+  - "**>50%** of variation in **gestational age** explained by **umbilical cord DNAm**."
+  - '![](figures/final-figure@3x.png){.main_pic width=70%}'
+logoleft_name: '![](figures/qr-frame.png){.main-img-left width=15%}'
+#logoright_name:
+output: 
+  posterdown::posterdown_betterland:
+    self_contained: false
+    pandoc_args: --mathjax
+    highlight: haddock
+    number_sections: false
+link-citations: true
+#bibliography: packages.bib
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(results = 'asis',
+                      echo = FALSE,
+                      warning = FALSE,
+                      tidy = FALSE,
+                      message = FALSE,
+                      fig.align = 'center',
+                      out.width = "100%")
+options(knitr.table.format = "html") 
+```
+
+
+## Introduction
+
+DNA methylation (DNAm) is highly sensitive to in utero perturbations and has an established role in both early development and regulation of gene expression. The fetal genetic component has been shown to contribute significantly to timing of birth, yet little is known about the identity and behavior of individual genes.    
+
+
+## Objectives
+
+1. Test for association between genome-wide DNAm levels in umbilical cord blood with gestational age at birth.
+2. Validate DNAm findings in an independent sample.
+3. Multi-omic approach to evalute DNAm cis-gene relationships with gene expression regulation.
+
+## Methods
+
+Genome-wide DNAm in umbilical cord blood was measured using the Illumina Infinium Human Methylation 450K BeadChip in both the **Pregnancy, Race, Environment, Genes (PREG - Virginia Commonwealth University)** and **Newborn Epigenetic STudy (NEST - Duke University)** cohorts. Cohorts did not differ in mean levels of maternal age at birth, self-identified race or sex of the newborn. Consistency of differentially methylated positions (DMPs) across the two cohorts was assessed in multiple ways; the degree of overlap in cohorts was non-random by simulation study, concordant in both direction of change and size of effects.  
+
+```{r, eval= FALSE}
+#\texttt{DNAm $\mathtt{\sim}$ GA + Age + PC + Educ + Gran + Bcell + CD4T + NK + $\epsilon$},
+
+#\texttt{GE $\mathtt{\sim}$ DNAm + Gran + Bcell + CD4T + $\epsilon$},
+```
+
+
+## Support
+NIHMD (P60MD002256, PI: York, Strauss); NIEHS (R21ES014947, PI: Hoyo) and NIEHS (R01ES016772, PI: Hoyo); NIDDK (R01DK085173, PI: Hoyo).
+
+
+
+```{r, flowchart-fig, fig.cap = 'PREG and NEST cohort DNA methylation array probe and sample filtering summary for major processing steps.', out.width = "90%"}
+knitr::include_graphics("figures/DNAm-GE-data-integration-flowchart.png")
+
+```
+
+
+```{r, eval = TRUE, overlap-fig, fig.cap = 'Summary of gene-based enrichment for Gene Ontology groups and KEGG pathways.', out.width = "90%"}
+knitr::include_graphics("figures/table_significant-DMP-overlap.png")
+
+```
+
+
+```{r, enrichment-fig, fig.cap = 'Summary of gene-based enrichment for Gene Ontology groups and KEGG pathways.', out.width = "90%"}
+knitr::include_graphics("figures/fetal-overlap-filtered-enrichment-dotplot.png")
+
+```
+
+
+
+
+
+
+
