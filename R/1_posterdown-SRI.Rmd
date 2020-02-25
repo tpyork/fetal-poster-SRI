@@ -59,8 +59,8 @@ main_findings:
   - "**>50%** of variation in **gestational age** explained by **umbilical cord DNAm**."
   - '![](figures/final-figure@3x.png){.main_pic width=70%}'
 logoleft_name: '![](figures/qr-frame.png){.main-img-left width=15%}'
-#logoright_name:
-output: 
+logoright_name: '![](figures/qr-twitter.png){.main-img-right width=15%}'
+output:
   posterdown::posterdown_betterland:
     self_contained: false
     pandoc_args: --mathjax
@@ -89,19 +89,19 @@ DNA methylation (DNAm) is highly sensitive to in utero perturbations and has an 
 
 ## Objectives
 
-1. Test for association between genome-wide DNAm levels in umbilical cord blood with gestational age at birth.
-2. Validate DNAm findings in an independent sample.
-3. Multi-omic approach to evalute DNAm cis-gene relationships with gene expression regulation.
+1. Test for association between **genome-wide DNAm** levels in umbilical cord blood with **gestational age at birth**.
+2. **Validate** DNAm findings in an independent sample.
+3. Multi-omic approach to evalute DNAm cis-gene relationships with **gene expression regulation**.
 
 ## Methods
 
-Genome-wide DNAm in umbilical cord blood was measured using the Illumina Infinium Human Methylation 450K BeadChip in both the **Pregnancy, Race, Environment, Genes (PREG - Virginia Commonwealth University)** and **Newborn Epigenetic STudy (NEST - Duke University)** cohorts. Cohorts did not differ in mean levels of maternal age at birth, self-identified race or sex of the newborn. Consistency of differentially methylated positions (DMPs) across the two cohorts was assessed in multiple ways; the degree of overlap in cohorts was non-random by simulation study, concordant in both direction of change and size of effects.  
-
-```{r, eval= FALSE}
-#\texttt{DNAm $\mathtt{\sim}$ GA + Age + PC + Educ + Gran + Bcell + CD4T + NK + $\epsilon$},
-
-#\texttt{GE $\mathtt{\sim}$ DNAm + Gran + Bcell + CD4T + $\epsilon$},
-```
+- Illumina Infinium Human Methylation 450K BeadChip:
+  - Pregnancy, Race, Environment, Genes Study (**PREG** - VCU) (N= 124)
+  - Newborn Epigenetic STudy (**NEST** - Duke) (N= 378) 
+- Consistency of differentially methylated positions (DMPs) was assessed in multiple ways: 
+  - Degree of overlap in cohorts was non-random by simulation study
+  - Concordant in both direction of change and size of effects
+- CpGs significant in both studies (FDR=5%) were tested for association with *cis*-gene expression
 
 
 ## Support
@@ -128,11 +128,10 @@ knitr::include_graphics("figures/ge-gene-list.png")
 
 
 
-```{r, enrichment-fig, fig.cap = 'Summary of gene-based enrichment for Gene Ontology groups and KEGG pathways.', out.width = "90%"}
+```{r, enrichment-fig, fig.cap = 'Gene-based enrichment for Gene Ontology groups and KEGG pathways.', out.width = "90%"}
 knitr::include_graphics("figures/fetal-overlap-filtered-enrichment-dotplot.png")
 
 ```
-
 
 
 
