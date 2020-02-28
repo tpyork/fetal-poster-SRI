@@ -7,10 +7,17 @@
 
 ## Our reproducible poster adventure
 
-The York lab was excited to attend our first Society of Reproductive Investigation conference in March of 2020. Yet, we were less excited, as most academics, to prepare 3 separate posters and, according to my CV, I had not prepared a poster since 2012. Where to begin? 
+NB:  notes so far, needs lots of love..  
 
-Remembering a Rstudio conference talk in 2019 by ... on Bookdown  I headed straight to    . This looked promising. 
 
+Rstudio conference [talk][1] in 2019 by Yihui Xie I one the [pagedown][2] package. 
+
+
+pagedown::chrome_print(fs::path(here::here(), "/R/1_posterdown-SRI.Rmd"))
+
+
+
+https://fonts.google.com/
 
 https://github.com/brentthorne/posterdown
 
@@ -21,3 +28,8 @@ https://github.com/brentthorne/posterdown/wiki/posterdown_betterland
 
 What I think is a semi-outdated vignette (from April 2019).  
 https://pythonawesome.com/use-rmarkdown-to-generate-pdf-conference-posters-via-html-or-latex/
+
+
+
+[1]: https://resources.rstudio.com/rstudio-conf-2019/pagedown-creating-beautiful-pdfs-with-r-markdown-and-css
+[2]: https://cran.r-project.org/web/packages/pagedown/index.html

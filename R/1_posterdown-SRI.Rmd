@@ -2,7 +2,7 @@
 title: Umbilical Cord Blood DNA Methylation Loci Associated with Gestational Age at Birth
 title_textsize: 5
 #author_textcol: "blue"
-font_family: "arial"
+font_family: "Roboto"
 body_textsize: 40px
 body_bgcol: "white"
 #sectitle_boxshape: 4mm
@@ -91,7 +91,7 @@ DNA methylation (DNAm) is highly sensitive to in utero perturbations and has an 
 
 1. Test for association between **genome-wide DNAm** levels in umbilical cord blood with **gestational age at birth**.
 2. **Validate** DNAm findings in an independent sample.
-3. Multi-omic approach to evalute DNAm cis-gene relationships with **gene expression regulation**.
+3. Multi-omic approach to evaluate DNAm cis-gene relationships with **gene expression regulation**.
 
 ## Methods
 
