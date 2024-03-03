@@ -1,0 +1,139 @@
+---
+title: The Genetic Architecture of Cervical Length and Risk of Spontaneous Preterm Birth
+title_textsize: 5
+primary_colour: "#1D91C0"
+secondary_colour: "#41B6C4"
+accent_colour: "#C7E9B4"
+#author_textcol: "blue"
+font_family: "Roboto"
+body_textsize: 40px
+body_bgcol: "white"
+main_fontfamily: "Roboto"
+#sectitle_boxshape: 4mm
+author:
+  - name: Timothy P. York
+    affil: 1
+    twitter: york_rva
+    email: tpyork@vcu.edu
+    orcid: 0000-0003-4068-4286
+    main: true
+  - name: Hope M. Wolf
+    affil: 1
+  - name: Bradley T. Webb
+    affil: 2
+  - name: Roberto Romero
+    affil: 3
+  - name: Adi L. Tarca
+    affil: 4
+  - name: Sonia S. Hassan
+    affil: 4
+  - name: Shawn J. Latendresse
+    affil: 5
+  - name: Tinnakorn Chaiworapongsa4
+    affil: 4
+  - name: Stanley Berry
+    affil: 4
+  - name: Nardhy Gomez-Lopez
+    affil: 4
+  - name: Piya Chaemsaithong
+    affil: 4
+  - name: Eunjung Jung
+    affil: 4
+  - name: Jerome F. Strauss III
+    affil: 6
+  
+affiliation:
+  - num: 1
+    address: Department of Human and Molecular Genetics, Virginia Commonwealth University, VA
+  - num: 2
+    address: GenOmics, Bioinformatics, and Translational Research Center, RTI International, NC
+  - num: 3
+    address: Pregnancy Research Branch, Division of Obstetrics and Maternal-Fetal Medicine, Division of Intramural Research, NICHD, U.S. Department of Health and Human Services, MI
+  - num: 4
+    address: Department of Obstetrics and Gynecology, Wayne State University School of Medicine, MI
+  - num: 5
+    address: Department of Psychology and Neuroscience, Baylor University, TX
+  - num: 6
+    address: Department of Obstetrics and Gynecology, University of Pennsylvania, PA
+main_findings:
+  - "*Shared **Genetic** Etiology* between **Cervical Length** and **Preterm Birth**"
+  - '![](figures/frontispiece.svg){.main_pic width=80%}'
+logoright_name: '![](figures/qr-paper-2.svg){.main-img-right width=10%}'
+logoleft_name: '![](figures/vcu-health-SOM.png){.main-img-left width=35%}'
+output:
+  posterdown::posterdown_betterland:
+    self_contained: false
+    pandoc_args: --mathjax
+    highlight: haddock
+    number_sections: false
+knit: pagedown::chrome_print
+link-citations: true
+#bibliography: packages.bib
+---
+
+```{r, include=FALSE}
+knitr::opts_chunk$set(results = 'asis',
+                      echo = FALSE,
+                      warning = FALSE,
+                      tidy = FALSE,
+                      message = FALSE,
+                      fig.align = 'center',
+                      out.width = "100%")
+options(knitr.table.format = "html") 
+```
+
+
+## Introduction
+
+Sonographic cervical length is a powerful predictor of spontaneous preterm birth (sPTB) and is used as part of clinical care to prevent preterm birth. Twin and family studies have established a maternal genetic heritability for sPTB ranging from 13 to 20%. **Yet, there are no corresponding estimates of heritability for mid-trimester cervical length or an understanding of how genetic factors contribute to changes in the cervix across pregnancy.**
+
+
+## Objectives
+
+1. Provide the first heribility estimate for cervical length change in pregnancy.
+2. Estimate the extent to which genetic factors contributing to cervical length also influence pregnancy duration. (*i.e.*, genetic correlation).
+
+
+## Methods
+
+- Next-generation 1x sequencing was performed on maternal blood DNA from **5023** patients resulting in **19.8M** variants and **4413** samples after quality control.  
+- The cervix was imaged via **transvaginal ultrasound** between **8** and **40 weeks** of gestation, with a median of 5 (IQR: 3-8) serial CL measurements recorded per pregnancy.
+- Gestational age at assessment (GAA) and gesational age at delivery (GAD) were measured from the last menstrual period and confirmed by ultrasound.
+- Pregnancy-specific change in CL during pregnancy was modeled as a non-linear **longitudinal growth curve**, described by an intercept **(I)**, linear slope **(L)**, and quadratic slope **(Q)**.
+- Heritabilty and genetic correlations were estimated using Genome-wide Complex Trait Analysis (**GCTA**, Yang 2011).
+
+<br>
+<br>
+
+## Results
+
+```{r, intercept-fig, out.width = "100%", fig.cap = 'Cervical Length Gestational Duration GWAS Results.'}
+knitr::include_graphics("figures/GAD_Man.jpg")
+
+```
+
+```{r, slope-fig, out.width = "100%", fig.cap = 'GTEx Tissue Gene Expression Enrichment across CL GWAS.'}
+knitr::include_graphics("figures/fuma.svg")
+
+```
+
+
+```{r, snp-table, out.width = "100%", fig.cap = 'SNPs of Interest across Cervical Length GWAS.'}
+knitr::include_graphics("figures/poster-table.svg")
+
+```
+
+
+## Conclusions
+
+- **Cervical Length** change was influenced by **genetic** factors (heritability = 51%)
+- Genetic risk for **GAD/sPTB** was highly shared with genetic risk for **Cervical Length** change.
+- Suggests that a large proportion of genes for pregnancy duration exert their influence through cervical length change.
+
+
+*This research was supported by funds from the Perinatology Research Branch of the NICHD/NIH/DHHS.*
+
+
+
+
+
